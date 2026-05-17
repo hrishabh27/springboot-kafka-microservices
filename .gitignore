@@ -1,2 +1,21 @@
 ## You can download zipkin and run command: java -jar zipkin-server-3.4.1-exec.jar at project root path
 zipkin-server-3.4.1-exec.jar
+
+# Runtime data directories
+data/
+kafka/
+
+# Log files
+*.log
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# Build artifacts (keep source code jars, ignore runtime jars)
+target/*.jar.original
+
+# Temporary files
+*.bak
+*~
