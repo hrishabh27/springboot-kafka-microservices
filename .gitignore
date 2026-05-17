@@ -1,21 +1,70 @@
-## You can download zipkin and run command: java -jar zipkin-server-3.4.1-exec.jar at project root path
-zipkin-server-3.4.1-exec.jar
+# =============================================================================
+# E-COMMERCE MICROSERVICES PLATFORM - GITIGNORE
+# =============================================================================
 
-# Runtime data directories
-data/
-kafka/
+## Spring Boot
+# Build artifacts
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
 
-# Log files
+## Environment files - NEVER commit these!
+.env
+.env.local
+.env.*.local
+*.env
+
+## Maven
+.mvn/
+!mvnw
+!mvnw.cmd
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+## IDE
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+.project
+.classpath
+.settings/
 *.log
 
-# IDE files
-.idea/
-*.iml
-.vscode/
+## Runtime and Data
+# Kafka and Zookeeper data
+data/
+kafka/
+zookeeper/
 
-# Build artifacts (keep source code jars, ignore runtime jars)
-target/*.jar.original
+# Docker volumes
+*.vol
 
-# Temporary files
+# Logs
+logs/
+*.log
+tmp/
+
+## OS files
+.DS_Store
+Thumbs.db
+
+## Temporary files
 *.bak
 *~
+~*
+
+## Documentation (keep these, but exclude local PDF exports)
+*.pdf
+
+## Build tools
+.zipkin-server-*.jar
